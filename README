@@ -1,0 +1,5 @@
+conda create --name prime python=3.5.1
+source activate prime
+conda install pandas=0.18.0
+conda clean -y --all
+pip install --user primesieve
