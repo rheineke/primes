@@ -3,3 +3,6 @@ source activate prime
 conda install pandas=0.18.0
 conda clean -y --all
 pip install --user primesieve
+
+List of largest known primes
+http://primes.utm.edu/primes/
