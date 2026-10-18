@@ -12,3 +12,10 @@ ipsh.py
 # Configuration files
 conf/
 data/
+
+# Build, tool and environment caches
+.venv/
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/

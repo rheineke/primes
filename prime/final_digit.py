@@ -2,7 +2,6 @@ from collections import defaultdict
 
 import numpy as np
 import pandas as pd
-from primesieve.numpy import generate_n_primes_array
 import primesieve
 
 __author__ = 'rheineke'
@@ -11,12 +10,12 @@ __author__ = 'rheineke'
 def next_digit_after_digit_series(last_digit_srs, last_digit):
     # Count last digits of next prime after last_digit
     lst_digit_label = last_digit_srs == last_digit
-    after_lst_digit_label = lst_digit_label.shift().fillna(False)
+    after_lst_digit_label = lst_digit_label.shift(fill_value=False)
     return last_digit_srs.loc[after_lst_digit_label].value_counts()
 
 
 def numpy_main(n_primes):
-    prime_srs = pd.Series(generate_n_primes_array(n_primes))
+    prime_srs = pd.Series(np.asarray(primesieve.n_primes(n_primes)))
     lst_digit_srs = prime_srs % 10
     # Count number of each last digit
     cnt_lst_digit_srs = lst_digit_srs.value_counts()
