@@ -1,10 +1,8 @@
-from collections import defaultdict
-
 import numpy as np
 import pandas as pd
 import primesieve
 
-__author__ = 'rheineke'
+__author__ = "rheineke"
 
 
 def next_digit_after_digit_series(last_digit_srs, last_digit):
@@ -25,7 +23,7 @@ def numpy_main(n_primes):
     next_after_three_srs = next_digit_after_digit_series(lst_digit_srs, 3)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # n_primes = 100000000
     n_primes = 1000000000
 
