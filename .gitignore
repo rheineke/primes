@@ -1,0 +1,21 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+# Python
+.cache/
+__pycache__
+
+# IDE
+.idea/
+/.project
+ipsh.py
+
+# Configuration files
+conf/
+data/
+
+# Build, tool and environment caches
+.venv/
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
